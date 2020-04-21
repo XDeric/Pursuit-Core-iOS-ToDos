@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    lazy var tableview: UITableView = {
+        let tv = UITableView()
+        return tv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +21,18 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
+    
 }
 
