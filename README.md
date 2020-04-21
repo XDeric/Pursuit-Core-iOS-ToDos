@@ -24,7 +24,7 @@ Create your own Repo! Submit on Canvas!
 
 ## Sample UI
 
-![image](./images/main-screen.png | width=200)
+![image](./images/main-screen.png)
 
 
 ## Bonus 
