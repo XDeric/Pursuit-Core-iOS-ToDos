@@ -6,7 +6,6 @@ Create a simple To-Do app
 
 Create your own Repo! Submit on Canvas!
 
-(Need Pic)
 
 
 ## Requirements 
@@ -23,9 +22,17 @@ Create your own Repo! Submit on Canvas!
 - A simple User Interface that fits on multiple iPhone devices by using Autolayout.
 - MVC Design.
 
+## Sample UI
+
+![image](./images/main-screen.png)
+
+
 ## Bonus 
 - Use animations
 - Add a "due date" to each task when it is created, and change the color of the cell if it is overdue but still outstanding.
 - Allow user to add the ToDo to their calendar, using proper permissions. 
 
+## Rubric
+
+![rubric](./images/rubric.png)
 
