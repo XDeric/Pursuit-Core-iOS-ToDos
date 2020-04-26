@@ -46,6 +46,15 @@ class ViewController: UIViewController {
         present(addVC, animated: true, completion: nil)
     }
     
+    func getOutData(){
+        outTask = PersistanceHelper.shared.fetchData(OutstandingTask.self)
+    }
+    
+    func getCompData(){
+        compTask = PersistanceHelper.shared.fetchData(CompletedTask.self)
+    }
+    
+    
     func setUp(){
         tableview.translatesAutoresizingMaskIntoConstraints = false
         add.translatesAutoresizingMaskIntoConstraints = false
@@ -53,15 +62,16 @@ class ViewController: UIViewController {
         view.addSubview(tableview)
         
         NSLayoutConstraint.activate([
-            tableview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableview.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableview.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            add.topAnchor.constraint(equalTo: view.topAnchor),
+            add.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             add.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             add.widthAnchor.constraint(equalToConstant: 50),
-            add.heightAnchor.constraint(equalToConstant: 30)
+            add.heightAnchor.constraint(equalToConstant: 20),
+            
+            tableview.topAnchor.constraint(equalTo: add.bottomAnchor),
+            tableview.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableview.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             
         ])
     }
@@ -69,6 +79,12 @@ class ViewController: UIViewController {
     
     
     //MARK: Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        getOutData()
+        getCompData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -76,6 +92,9 @@ class ViewController: UIViewController {
 
 
 }
+
+
+
 
 //MARK: Extensions
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -95,7 +114,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellList", for: indexPath) as? TableViewCell else {return UITableViewCell()}
+        
+        switch indexPath.section {
+        case 0:
+            cell.title.text = outTask[indexPath.row].name
+        case 1:
+            cell.title.text = compTask[indexPath.row].name
+        default:
+            cell.title.text = ""
+        }
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

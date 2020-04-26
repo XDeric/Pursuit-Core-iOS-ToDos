@@ -10,21 +10,50 @@ import UIKit
 
 class addTaskVC: UIViewController {
 
+    let persistence = PersistanceHelper.shared
+    
+    var searchString = ""{
+        didSet{
+            let data = OutstandingTask(context: persistence.context)
+            data.name = searchString
+            persistence.save()
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    lazy var searchText: UITextField = {
+    let tf = UITextField()
+    tf.placeholder = "Type in Task"
+    tf.delegate = self
+    tf.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    tf.layer.cornerRadius = 5
+    tf.borderStyle = .roundedRect
+    return tf
+    }()
+    
+    func setUpConstraints(){
+        searchText.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(searchText)
+
+        NSLayoutConstraint.activate([
+            searchText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            searchText.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            searchText.widthAnchor.constraint(equalToConstant: 300),
+            searchText.heightAnchor.constraint(equalToConstant: 50),
+        ])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpConstraints()
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension addTaskVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchString = textField.text ?? ""
+        return true
     }
-    */
-
 }
