@@ -20,6 +20,7 @@
 		85410A062455F53700F33BBB /* OutstandingTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85410A022455F53700F33BBB /* OutstandingTask+CoreDataProperties.swift */; };
 		85410A072455F53700F33BBB /* CompletedTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85410A032455F53700F33BBB /* CompletedTask+CoreDataClass.swift */; };
 		85410A082455F53700F33BBB /* CompletedTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85410A042455F53700F33BBB /* CompletedTask+CoreDataProperties.swift */; };
+		85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85410A0B2455F81D00F33BBB /* addTaskVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		85410A022455F53700F33BBB /* OutstandingTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutstandingTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		85410A032455F53700F33BBB /* CompletedTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataClass.swift"; sourceTree = "<group>"; };
 		85410A042455F53700F33BBB /* CompletedTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85410A0B2455F81D00F33BBB /* addTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +93,8 @@
 		854109D8244F70E300F33BBB /* Todo_4_21_20 */ = {
 			isa = PBXGroup;
 			children = (
-				85410A012455F53700F33BBB /* OutstandingTask+CoreDataClass.swift */,
-				85410A022455F53700F33BBB /* OutstandingTask+CoreDataProperties.swift */,
-				85410A032455F53700F33BBB /* CompletedTask+CoreDataClass.swift */,
-				85410A042455F53700F33BBB /* CompletedTask+CoreDataProperties.swift */,
-				854109DD244F70E300F33BBB /* ViewController.swift */,
-				854109FF2455EC9300F33BBB /* PersistenceHelper.swift */,
+				85410A092455F7DD00F33BBB /* Model */,
+				85410A0A2455F7F100F33BBB /* Controller */,
 				854109EA244F70E900F33BBB /* Info.plist */,
 				854109FE2455EC5F00F33BBB /* Supporting Files */,
 			);
@@ -123,6 +121,27 @@
 				854109E2244F70E300F33BBB /* Todo_4_21_20.xcdatamodeld */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85410A092455F7DD00F33BBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85410A012455F53700F33BBB /* OutstandingTask+CoreDataClass.swift */,
+				85410A022455F53700F33BBB /* OutstandingTask+CoreDataProperties.swift */,
+				85410A032455F53700F33BBB /* CompletedTask+CoreDataClass.swift */,
+				85410A042455F53700F33BBB /* CompletedTask+CoreDataProperties.swift */,
+				854109FF2455EC9300F33BBB /* PersistenceHelper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85410A0A2455F7F100F33BBB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				85410A0B2455F81D00F33BBB /* addTaskVC.swift */,
+				854109DD244F70E300F33BBB /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +250,7 @@
 				85410A052455F53700F33BBB /* OutstandingTask+CoreDataClass.swift in Sources */,
 				854109E4244F70E300F33BBB /* Todo_4_21_20.xcdatamodeld in Sources */,
 				854109DA244F70E300F33BBB /* AppDelegate.swift in Sources */,
+				85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */,
 				85410A002455EC9300F33BBB /* PersistenceHelper.swift in Sources */,
 				854109DC244F70E300F33BBB /* SceneDelegate.swift in Sources */,
 				85410A062455F53700F33BBB /* OutstandingTask+CoreDataProperties.swift in Sources */,

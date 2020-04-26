@@ -3,7 +3,6 @@
     <entity name="CompletedTask" representedClassName="CompletedTask" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify"/>
     </entity>
     <entity name="OutstandingTask" representedClassName="OutstandingTask" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -11,6 +10,6 @@
     </entity>
     <elements>
         <element name="OutstandingTask" positionX="-54" positionY="-9" width="128" height="73"/>
-        <element name="CompletedTask" positionX="-36" positionY="9" width="128" height="88"/>
+        <element name="CompletedTask" positionX="-36" positionY="9" width="128" height="73"/>
     </elements>
 </model>
