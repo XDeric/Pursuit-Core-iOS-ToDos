@@ -12,11 +12,16 @@ class ViewController: UIViewController {
     
     lazy var tableview: UITableView = {
         let tv = UITableView()
+        tv.delegate = self
+        tv.dataSource = self
+        tv.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        //tv.register(CartCell.self, forCellReuseIdentifier: "cellList")
         return tv
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 

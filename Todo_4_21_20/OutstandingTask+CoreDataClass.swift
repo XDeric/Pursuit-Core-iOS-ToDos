@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(OutstandingTask)
+
 public class OutstandingTask: NSManagedObject {
 
 }
