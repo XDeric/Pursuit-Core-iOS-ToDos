@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         tv.delegate = self
         tv.dataSource = self
         tv.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        //tv.register(CartCell.self, forCellReuseIdentifier: "cellList")
+        tv.register(TableViewCell.self, forCellReuseIdentifier: "cellList")
         return tv
     }()
 

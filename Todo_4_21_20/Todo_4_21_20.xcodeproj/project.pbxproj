@@ -21,6 +21,7 @@
 		85671ECE2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */; };
 		85671ED12455FE4F004847FE /* CompletedTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */; };
 		85671ED22455FE4F004847FE /* CompletedTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */; };
+		85671ED52455FF8C004847FE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ED42455FF8C004847FE /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutstandingTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataClass.swift"; sourceTree = "<group>"; };
 		85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85671ED42455FF8C004847FE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				85410A092455F7DD00F33BBB /* Model */,
+				85671ED32455FF63004847FE /* View */,
 				85410A0A2455F7F100F33BBB /* Controller */,
 				854109EA244F70E900F33BBB /* Info.plist */,
 				854109FE2455EC5F00F33BBB /* Supporting Files */,
@@ -142,6 +145,14 @@
 				854109DD244F70E300F33BBB /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		85671ED32455FF63004847FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85671ED42455FF8C004847FE /* TableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 				85671ECD2455FB82004847FE /* OutstandingTask+CoreDataClass.swift in Sources */,
 				854109E4244F70E300F33BBB /* Todo_4_21_20.xcdatamodeld in Sources */,
 				854109DA244F70E300F33BBB /* AppDelegate.swift in Sources */,
+				85671ED52455FF8C004847FE /* TableViewCell.swift in Sources */,
 				85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */,
 				85410A002455EC9300F33BBB /* PersistenceHelper.swift in Sources */,
 				85671ED22455FE4F004847FE /* CompletedTask+CoreDataProperties.swift in Sources */,
