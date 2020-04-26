@@ -19,6 +19,8 @@
 		85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85410A0B2455F81D00F33BBB /* addTaskVC.swift */; };
 		85671ECD2455FB82004847FE /* OutstandingTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECB2455FB82004847FE /* OutstandingTask+CoreDataClass.swift */; };
 		85671ECE2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */; };
+		85671ED12455FE4F004847FE /* CompletedTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */; };
+		85671ED22455FE4F004847FE /* CompletedTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		85410A0B2455F81D00F33BBB /* addTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskVC.swift; sourceTree = "<group>"; };
 		85671ECB2455FB82004847FE /* OutstandingTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutstandingTask+CoreDataClass.swift"; sourceTree = "<group>"; };
 		85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutstandingTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,6 @@
 		854109CD244F70E300F33BBB = {
 			isa = PBXGroup;
 			children = (
-				85671ECB2455FB82004847FE /* OutstandingTask+CoreDataClass.swift */,
-				85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */,
 				854109D8244F70E300F33BBB /* Todo_4_21_20 */,
 				854109F2244F70EA00F33BBB /* Todo_4_21_20Tests */,
 				854109D7244F70E300F33BBB /* Products */,
@@ -124,6 +126,10 @@
 		85410A092455F7DD00F33BBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				85671ECB2455FB82004847FE /* OutstandingTask+CoreDataClass.swift */,
+				85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */,
+				85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */,
+				85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */,
 				854109FF2455EC9300F33BBB /* PersistenceHelper.swift */,
 			);
 			path = Model;
@@ -241,11 +247,13 @@
 			files = (
 				854109DE244F70E300F33BBB /* ViewController.swift in Sources */,
 				85671ECE2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift in Sources */,
+				85671ED12455FE4F004847FE /* CompletedTask+CoreDataClass.swift in Sources */,
 				85671ECD2455FB82004847FE /* OutstandingTask+CoreDataClass.swift in Sources */,
 				854109E4244F70E300F33BBB /* Todo_4_21_20.xcdatamodeld in Sources */,
 				854109DA244F70E300F33BBB /* AppDelegate.swift in Sources */,
 				85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */,
 				85410A002455EC9300F33BBB /* PersistenceHelper.swift in Sources */,
+				85671ED22455FE4F004847FE /* CompletedTask+CoreDataProperties.swift in Sources */,
 				854109DC244F70E300F33BBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
