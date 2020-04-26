@@ -71,7 +71,7 @@ class ViewController: UIViewController {
             add.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             add.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             add.widthAnchor.constraint(equalToConstant: 50),
-            add.heightAnchor.constraint(equalToConstant: 20),
+            add.heightAnchor.constraint(equalToConstant: 30),
             
             tableview.topAnchor.constraint(equalTo: add.bottomAnchor),
             tableview.leftAnchor.constraint(equalTo: view.leftAnchor),
@@ -81,6 +81,9 @@ class ViewController: UIViewController {
         ])
     }
     
+    func reload(){
+        tableview.reloadData()
+    }
     
     
     //MARK: Lifecycle
@@ -116,6 +119,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         2
     }
     
+    //load each section with proper data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellList", for: indexPath) as? TableViewCell else {return UITableViewCell()}
         
@@ -142,6 +146,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    //Do stuff when rows from certain section is clicked
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
@@ -150,7 +155,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             data.name = outTask[indexPath.row].name
             PersistanceHelper.shared.save()
             deleteItem(indexPath: indexPath)
-            tableView.reloadData()
+            reload()
         case 1:
             print("haha no")
         default:
