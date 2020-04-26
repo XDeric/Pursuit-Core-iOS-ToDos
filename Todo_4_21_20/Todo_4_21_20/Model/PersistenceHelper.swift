@@ -113,11 +113,11 @@ final class PersistanceHelper{
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
             
             //looks through ReciepeData at title
-            let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+            let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
             fetchRequest.sortDescriptors = [sortDescriptor]
             
             //filters through by the title
-            let predicate = NSPredicate(format: "title CONTAINS[c] %@", "\(identifier)")
+            let predicate = NSPredicate(format: "name CONTAINS[c] %@", "\(identifier)")
             fetchRequest.predicate = predicate
             fetchRequest.fetchLimit = 1
             

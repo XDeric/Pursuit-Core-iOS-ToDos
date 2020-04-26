@@ -54,6 +54,11 @@ class ViewController: UIViewController {
         compTask = PersistanceHelper.shared.fetchData(CompletedTask.self)
     }
     
+    func deleteItem(indexPath: IndexPath){
+        PersistanceHelper.shared.delete(objectType: OutstandingTask.self, identifier: outTask[indexPath.row].name ?? "")
+        tableview.reloadData()
+        outTask.remove(at: indexPath.row)
+    }
     
     func setUp(){
         tableview.translatesAutoresizingMaskIntoConstraints = false
@@ -89,8 +94,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUp()
     }
-
-
 }
 
 
@@ -139,7 +142,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            print("delete")
+            let data = CompletedTask(context: PersistanceHelper.shared.context)
+            data.name = outTask[indexPath.row].name
+            PersistanceHelper.shared.save()
+            deleteItem(indexPath: indexPath)
+            tableView.reloadData()
+        case 1:
+            print("haha no")
+        default:
+            print("do nutin")
+        }
+    }
     
 }
 
