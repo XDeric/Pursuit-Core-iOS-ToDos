@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var outTask = [OutstandingTask](){
+        didSet{
+            tableview.reloadData()
+        }
+    }
+    var compTask = [CompletedTask](){
+        didSet{
+            tableview.reloadData()
+        }
+    }
+
     lazy var tableview: UITableView = {
         let tv = UITableView()
         tv.delegate = self
@@ -18,16 +29,33 @@ class ViewController: UIViewController {
         tv.register(TableViewCell.self, forCellReuseIdentifier: "cellList")
         return tv
     }()
-
+    
+    
+    
+    func setUp(){
+        tableview.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableview)
+        
+        NSLayoutConstraint.activate([
+            tableview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableview.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableview.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    
+    
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        setUp()
     }
 
 
 }
 
+//MARK: Extensions
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         0
