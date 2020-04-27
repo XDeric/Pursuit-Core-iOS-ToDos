@@ -23,7 +23,7 @@ class addTaskVC: UIViewController {
     
     lazy var searchText: UITextField = {
     let tf = UITextField()
-    tf.placeholder = "Type in Task"
+    tf.placeholder = "Type in a Task"
     tf.delegate = self
     tf.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     tf.layer.cornerRadius = 5

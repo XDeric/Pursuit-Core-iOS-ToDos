@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     
     @objc func addPressed(){
         let addVC = addTaskVC()
+        addVC.modalPresentationStyle = .fullScreen
         present(addVC, animated: true, completion: nil)
     }
     
@@ -82,7 +83,9 @@ class ViewController: UIViewController {
     }
     
     func reload(){
-        tableview.reloadData()
+        DispatchQueue.main.async {
+            self.tableview.reloadData()
+        }
     }
     
     
@@ -155,7 +158,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             data.name = outTask[indexPath.row].name
             PersistanceHelper.shared.save()
             deleteItem(indexPath: indexPath)
-            reload()
+            reload() //MARK: some reason it's not reloading when I delete item have to refresh app =/
         case 1:
             print("haha no")
         default:
