@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85037B632458ACC500DFAC61 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85037B622458ACC500DFAC61 /* PersistenceManager.swift */; };
+		85037B652458B09600DFAC61 /* TaskModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85037B642458B09600DFAC61 /* TaskModels.swift */; };
+		85037B672458B11000DFAC61 /* TaskPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85037B662458B11000DFAC61 /* TaskPersistence.swift */; };
 		854109DA244F70E300F33BBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854109D9244F70E300F33BBB /* AppDelegate.swift */; };
 		854109DC244F70E300F33BBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854109DB244F70E300F33BBB /* SceneDelegate.swift */; };
 		854109DE244F70E300F33BBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854109DD244F70E300F33BBB /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85037B622458ACC500DFAC61 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		85037B642458B09600DFAC61 /* TaskModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModels.swift; sourceTree = "<group>"; };
+		85037B662458B11000DFAC61 /* TaskPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPersistence.swift; sourceTree = "<group>"; };
 		854109D6244F70E300F33BBB /* Todo_4_21_20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo_4_21_20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854109D9244F70E300F33BBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		854109DB244F70E300F33BBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +140,9 @@
 				85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */,
 				85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */,
 				854109FF2455EC9300F33BBB /* PersistenceHelper.swift */,
+				85037B642458B09600DFAC61 /* TaskModels.swift */,
+				85037B662458B11000DFAC61 /* TaskPersistence.swift */,
+				85037B622458ACC500DFAC61 /* PersistenceManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,9 +267,12 @@
 			files = (
 				854109DE244F70E300F33BBB /* ViewController.swift in Sources */,
 				85671ECE2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift in Sources */,
+				85037B672458B11000DFAC61 /* TaskPersistence.swift in Sources */,
 				85671ED12455FE4F004847FE /* CompletedTask+CoreDataClass.swift in Sources */,
+				85037B632458ACC500DFAC61 /* PersistenceManager.swift in Sources */,
 				85671ECD2455FB82004847FE /* OutstandingTask+CoreDataClass.swift in Sources */,
 				854109E4244F70E300F33BBB /* Todo_4_21_20.xcdatamodeld in Sources */,
+				85037B652458B09600DFAC61 /* TaskModels.swift in Sources */,
 				854109DA244F70E300F33BBB /* AppDelegate.swift in Sources */,
 				85671ED52455FF8C004847FE /* TableViewCell.swift in Sources */,
 				85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */,
