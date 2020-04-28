@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var outTask = [OutstandingTask](){
+    var outTask = [Outstanding](){
         didSet{
             tableview.reloadData()
         }
     }
-    var compTask = [CompletedTask](){
+    var compTask = [Completed](){
         didSet{
             tableview.reloadData()
         }
@@ -48,15 +48,20 @@ class ViewController: UIViewController {
     }
     
     func getOutData(){
-        outTask = PersistanceHelper.shared.fetchData(OutstandingTask.self)
+        outTask = try! OutstandingHelper.manager.getFavorites()
     }
     
     func getCompData(){
-        compTask = PersistanceHelper.shared.fetchData(CompletedTask.self)
+        compTask = try! CompletedHelper.manager.getFavorites()
     }
     
     func deleteItem(indexPath: IndexPath){
-        PersistanceHelper.shared.delete(objectType: OutstandingTask.self, identifier: outTask[indexPath.row].name ?? "")
+        do{
+            try OutstandingHelper.manager.deleteFavorite(withID: outTask[indexPath.row].name)
+        }
+        catch{
+            print(error)
+        }
         tableview.reloadData()
         outTask.remove(at: indexPath.row)
     }
@@ -154,9 +159,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section {
         case 0:
             print("delete")
-            let data = CompletedTask(context: PersistanceHelper.shared.context)
-            data.name = outTask[indexPath.row].name
-            PersistanceHelper.shared.save()
+            do{
+                try CompletedHelper.manager.save(newFavorite: Completed(name: outTask[indexPath.row].name ))
+            }
+            catch{
+                print(error)
+            }
             deleteItem(indexPath: indexPath)
             reload() //MARK: some reason it's not reloading when I delete item have to refresh app =/
         case 1:

@@ -9,14 +9,15 @@
 import UIKit
 
 class addTaskVC: UIViewController {
-
-    let persistence = PersistanceHelper.shared
     
     var searchString = ""{
         didSet{
-            let data = OutstandingTask(context: persistence.context)
-            data.name = searchString
-            persistence.save()
+            do{
+                try OutstandingHelper.manager.save(newFavorite: Outstanding(name: searchString))
+            }
+            catch{
+                print(error)
+            }
             dismiss(animated: true, completion: nil)
         }
     }

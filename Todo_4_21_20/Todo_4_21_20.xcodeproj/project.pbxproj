@@ -18,12 +18,7 @@
 		854109E6244F70E900F33BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854109E5244F70E900F33BBB /* Assets.xcassets */; };
 		854109E9244F70E900F33BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854109E7244F70E900F33BBB /* LaunchScreen.storyboard */; };
 		854109F4244F70EA00F33BBB /* Todo_4_21_20Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854109F3244F70EA00F33BBB /* Todo_4_21_20Tests.swift */; };
-		85410A002455EC9300F33BBB /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854109FF2455EC9300F33BBB /* PersistenceHelper.swift */; };
 		85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85410A0B2455F81D00F33BBB /* addTaskVC.swift */; };
-		85671ECD2455FB82004847FE /* OutstandingTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECB2455FB82004847FE /* OutstandingTask+CoreDataClass.swift */; };
-		85671ECE2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */; };
-		85671ED12455FE4F004847FE /* CompletedTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */; };
-		85671ED22455FE4F004847FE /* CompletedTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */; };
 		85671ED52455FF8C004847FE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85671ED42455FF8C004847FE /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,12 +48,7 @@
 		854109EF244F70EA00F33BBB /* Todo_4_21_20Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Todo_4_21_20Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		854109F3244F70EA00F33BBB /* Todo_4_21_20Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_4_21_20Tests.swift; sourceTree = "<group>"; };
 		854109F5244F70EA00F33BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		854109FF2455EC9300F33BBB /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		85410A0B2455F81D00F33BBB /* addTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskVC.swift; sourceTree = "<group>"; };
-		85671ECB2455FB82004847FE /* OutstandingTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutstandingTask+CoreDataClass.swift"; sourceTree = "<group>"; };
-		85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutstandingTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataClass.swift"; sourceTree = "<group>"; };
-		85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompletedTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		85671ED42455FF8C004847FE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,11 +125,6 @@
 		85410A092455F7DD00F33BBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				85671ECB2455FB82004847FE /* OutstandingTask+CoreDataClass.swift */,
-				85671ECC2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift */,
-				85671ECF2455FE4F004847FE /* CompletedTask+CoreDataClass.swift */,
-				85671ED02455FE4F004847FE /* CompletedTask+CoreDataProperties.swift */,
-				854109FF2455EC9300F33BBB /* PersistenceHelper.swift */,
 				85037B642458B09600DFAC61 /* TaskModels.swift */,
 				85037B662458B11000DFAC61 /* TaskPersistence.swift */,
 				85037B622458ACC500DFAC61 /* PersistenceManager.swift */,
@@ -266,18 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				854109DE244F70E300F33BBB /* ViewController.swift in Sources */,
-				85671ECE2455FB82004847FE /* OutstandingTask+CoreDataProperties.swift in Sources */,
 				85037B672458B11000DFAC61 /* TaskPersistence.swift in Sources */,
-				85671ED12455FE4F004847FE /* CompletedTask+CoreDataClass.swift in Sources */,
 				85037B632458ACC500DFAC61 /* PersistenceManager.swift in Sources */,
-				85671ECD2455FB82004847FE /* OutstandingTask+CoreDataClass.swift in Sources */,
 				854109E4244F70E300F33BBB /* Todo_4_21_20.xcdatamodeld in Sources */,
 				85037B652458B09600DFAC61 /* TaskModels.swift in Sources */,
 				854109DA244F70E300F33BBB /* AppDelegate.swift in Sources */,
 				85671ED52455FF8C004847FE /* TableViewCell.swift in Sources */,
 				85410A0C2455F81D00F33BBB /* addTaskVC.swift in Sources */,
-				85410A002455EC9300F33BBB /* PersistenceHelper.swift in Sources */,
-				85671ED22455FE4F004847FE /* CompletedTask+CoreDataProperties.swift in Sources */,
 				854109DC244F70E300F33BBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
